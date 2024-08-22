@@ -1,2 +1,3 @@
-node_modules
-build
+*.log*
+node_modules/
+build/
