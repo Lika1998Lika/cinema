@@ -1,10 +1,12 @@
-export const createFilmDetailsInfoTemplate = () =>
+export const createFilmDetailsInfoTemplate = (task) => {
+  const { director, writers, age_rating, actors, release } = task;
+return (
   `
     <div class="film-details__info-wrap">
       <div class="film-details__poster">
         <img class="film-details__poster-img" src="./images/posters/the-great-flamarion.jpg" alt="">
 
-        <p class="film-details__age">18+</p>
+        <p class="film-details__age">${age_rating}</p>
       </div>
 
       <div class="film-details__info">
@@ -22,26 +24,26 @@ export const createFilmDetailsInfoTemplate = () =>
         <table class="film-details__table">
           <tr class="film-details__row">
             <td class="film-details__term">Director</td>
-            <td class="film-details__cell">Anthony Mann</td>
+            <td class="film-details__cell">${director}</td>
           </tr>
           <tr class="film-details__row">
             <td class="film-details__term">Writers</td>
-            <td class="film-details__cell">Anne Wigton, Heinz Herald, Richard Weil</td>
+            <td class="film-details__cell">${writers}</td>
           </tr>
           <tr class="film-details__row">
             <td class="film-details__term">Actors</td>
-            <td class="film-details__cell">Erich von Stroheim, Mary Beth Hughes, Dan Duryea</td>
+            <td class="film-details__cell">${actors}</td>
           </tr>
           <tr class="film-details__row">
             <td class="film-details__term">Release Date</td>
-            <td class="film-details__cell">30 March 1945</td>
+            <td class="film-details__cell">${release.date}</td>
           </tr>
           <tr class="film-details__row">
             <td class="film-details__term">Runtime</td>
             <td class="film-details__cell">1h 18m</td>
           </tr>
           <tr class="film-details__row">
-            <td class="film-details__term">Country</td>
+            <td class="film-details__term">${release.release_country}</td>
             <td class="film-details__cell">USA</td>
           </tr>
           <tr class="film-details__row">
@@ -58,4 +60,4 @@ export const createFilmDetailsInfoTemplate = () =>
         </p>
       </div>
     </div>
-  `;
+  `)};

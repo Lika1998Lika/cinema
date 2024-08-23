@@ -1,6 +1,5 @@
 export const createFilmDetailsCommentsTemplate = () =>
-  `
-    <ul class="film-details__comments-list">
+  `<ul class="film-details__comments-list">
       <li class="film-details__comment">
         <span class="film-details__comment-emoji">
           <img src="./images/emoji/smile.png" width="55" height="55" alt="emoji-smile">
